@@ -1,3 +1,10 @@
+## What should you use for offline storage of your Progressive Web App?
+
+Suggestion:
+
+* URL addressable resources: Use the (Service Worker) Cache API
+* All other data: IndexedDB (using a Promise wrapper library)
+
 | Type        | Sync | Async               | Web Workers | Window | Service Workers | Gotchas                                                                                                           | Libraries                                                                                                                                   |
 |-------------|------|---------------------|-------------|--------|-----------------|-------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------|
 | Cookies     | ✔    |                     |             |        |                 | Size-limited, only strings.  Not hooked up to Quota Manager                                                       | [js-cookie](https://github.com/js-cookie/js-cookie) [Cookies.js](https://github.com/ScottHamper/Cookies)                                    |
