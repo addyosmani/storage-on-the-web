@@ -7,7 +7,7 @@ Recommentations:
 
 | Type        | Sync | Async               | Web Workers | Window | Service Workers | Gotchas                                                                                                           | Libraries                                                                                                                                                                    |
 |-------------|------|---------------------|-------------|--------|-----------------|-------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [IndexedDB][]   |      | ✔  (event based)    | ✔           | ✔      | ✔               | Mandatory complexity  (schema versioning, transactions). [Observers proposed][]                                                           | [localForage][] (promises, legacy browser support), [idb-keyval][] (<500K, promises, if only need key-value), [idb][] (promises, also does iteration, indexing), [Dexie][] (complex queries, secondary indices), [PouchDB][] (sync), [Lovefield][] (relational), [ydn-db][] (dexie-like, works with WebSQL) |
+| [IndexedDB][]   |      | ✔  (event based)    | ✔           | ✔      | ✔               | Mandatory complexity  (schema versioning, transactions).                                                           | [localForage][] (promises, legacy browser support), [idb-keyval][] (<500K, promises, if only need key-value), [idb][] (promises, also does iteration, indexing), [Dexie][] (complex queries, secondary indices), [PouchDB][] (sync), [Lovefield][] (relational), [ydn-db][] (dexie-like, works with WebSQL) |
 | [Cache API][]   |      |  ✔  (promise based) | ✔           | ✔      | ✔               |                                                                                                                   | [sw-toolbox][]                                          
 | Cookies     | ✔    |                     |             |        |                 | Size-limited, only strings. [Async Cookies API proposed][]                                                       | [js-cookie][], [Cookies.js][]                                                                    |
 | [Web Storage][] | ✔    |                     |             |        |                 | Size-limited, only strings.                                                        | [store.js][], [lawnchair][]                                                                                                                                                                            |
@@ -21,6 +21,7 @@ Recommentations:
 * [Durable Storage][]: protect storage from the user agent’s clearing policies 
 * [Indexed Database API 2.0][]: advanced key-value data management
 * [Promisified IndexedDB][]: native support for a Promise-friendly version of IDB
+* [IndexedDB Observers][]: native IDB observation without needing wrapper around the database
 * [Quota Management API][]: check how much quota an app/origin is using
 * [Directory downloads][]: allow sites to download directories without .zip files
 * [File and Directory Entries API][]: support for file and directory upload by drag-and-drop
@@ -43,7 +44,7 @@ Recommentations:
 [lawnchair]: https://github.com/brianleroux/lawnchair
 [File and Directory Entries API]: https://wicg.github.io/entries-api/
 [idb-keyval]: https://www.npmjs.com/package/idb-keyval
-[Observers proposed]: https://github.com/WICG/indexed-db-observers
+[IndexedDB Observers]: https://github.com/WICG/indexed-db-observers
 [idb]: https://www.npmjs.com/package/idb
 [Chrome: Deprecating HTTP support]: https://groups.google.com/a/chromium.org/forum/#!topic/blink-dev/UKF8cK0EwMI/discussion
 [Firefox: Intent to Deprecate]: https://www.fxsitecompat.com/en-CA/docs/2016/application-cache-support-will-be-removed/
