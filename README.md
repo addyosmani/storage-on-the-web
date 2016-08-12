@@ -20,6 +20,7 @@ Recommentations:
 
 * [Durable Storage][]: protect storage from the user agent’s clearing policies 
 * [Indexed Database API 2.0][]: advanced key-value data management
+* [Promisified IndexedDB][]: native support for a Promise-friendly version of IDB
 * [Quota Management API][]: check how much quota an app/origin is using
 * [Directory downloads][]: allow sites to download directories without .zip files
 * [File and Directory Entries API][]: support for file and directory upload by drag-and-drop
@@ -55,3 +56,4 @@ Recommentations:
 [Directory downloads]: https://github.com/drufball/directory-download
 [Quota Management API]: https://www.w3.org/TR/quota-api/
 [Indexed Database API 2.0]: https://w3c.github.io/IndexedDB/
+[Promisified IndexedDB]: https://github.com/inexorabletash/indexeddb-promises
