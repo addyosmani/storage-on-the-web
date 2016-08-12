@@ -9,12 +9,12 @@ Recommentations:
 |-------------|------|---------------------|-------------|--------|-----------------|-------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | [IndexedDB][]   |      | ✔  (event based)    | ✔           | ✔      | ✔               | Mandatory complexity  (schema versioning, transactions).                                                           | [localForage][] (promises, legacy browser support), [idb-keyval][] (<500K, promises, if only need key-value), [idb][] (promises, also does iteration, indexing), [Dexie][] (complex queries, secondary indices), [PouchDB][] (sync), [Lovefield][] (relational), [ydn-db][] (dexie-like, works with WebSQL) |
 | [Cache API][]   |      |  ✔  (promise based) | ✔           | ✔      | ✔               |                                                                                                                   | [sw-toolbox][]                                          
-| Cookies     | ✔    |                     |             |        |                 | Size-limited, only strings. [Async Cookies API proposed][]                                                       | [js-cookie][], [Cookies.js][]                                                                    |
+| Cookies     | ✔    |                     |             |        |                 | Size-limited, only strings.                                                        | [js-cookie][], [Cookies.js][]                                                                    |
 | [Web Storage][] | ✔    |                     |             |        |                 | Size-limited, only strings.                                                        | [store.js][], [lawnchair][]                                                                                                                                                                            |
 | [File API][]   |✔ (callback based)      |✔                   |✔             |✔        |                 | Superseded by the [File and Directory Entries API][]                                                 |   [FileAPI library][]. For file-saving see [FileSaver.js][] and the [writable-files][] proposals                                                                                                                                                                           | 
-| [WebSQL][]      |      | ✔  (callback based) |             |        |                 | Rejected by Edge, Firefox.  Likely to unship in Chrome. Not available in a Web/Service Worker.                    |                                                                                                                                                                              |
+| [WebSQL][]      |      | ✔  (callback based) |             |        |                 | Not available in a Web/Service Worker. Rejected by Edge, Firefox.  Likely to unship in Chrome.                     |                                                                                                                                                                              |
 | [AppCache][]    |✔      |                     |             |        |                 | [Chrome: Deprecating HTTP support][],  [Firefox: Intent to Deprecate][]                                                     |                                                                                                                                                                              |                                                                           |
-| [FileSystem][]  | ✔    | ✔  (callback based) | ✔           | ✔      |                 | Sandboxed - not native file access. No interest from other vendors outside Chrome |                                                                                                                                                                              |
+| [FileSystem][]  | ✔    | ✔  (callback based) | ✔           | ✔      |                 | Sandboxed - not native file access. No interest outside Chrome |                                                                                                                                                                              |
 
 ## Current and future work
 
@@ -22,7 +22,9 @@ Recommentations:
 * [Indexed Database API 2.0][]: advanced key-value data management
 * [Promisified IndexedDB][]: native support for a Promise-friendly version of IDB
 * [IndexedDB Observers][]: native IDB observation without needing wrapper around the database
+* [Async Cookies API][]: async JavaScript cookies API for documents and workers
 * [Quota Management API][]: check how much quota an app/origin is using
+* [writable-files][]: allow sites to interact with local files more seamlessly
 * [Directory downloads][]: allow sites to download directories without .zip files
 * [File and Directory Entries API][]: support for file and directory upload by drag-and-drop
 
@@ -50,7 +52,7 @@ Recommentations:
 [Firefox: Intent to Deprecate]: https://www.fxsitecompat.com/en-CA/docs/2016/application-cache-support-will-be-removed/
 [Cookies.js]: https://github.com/ScottHamper/Cookies
 [js-cookie]: https://github.com/js-cookie/js-cookie
-[Async Cookies API proposed]: https://github.com/bsittler/async-cookies-api
+[Async Cookies API]: https://github.com/bsittler/async-cookies-api
 [sw-toolbox]: https://github.com/GoogleChrome/sw-toolbox
 [Dexie]: http://dexie.org/
 [Durable Storage]: https://storage.spec.whatwg.org/
