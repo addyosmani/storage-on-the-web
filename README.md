@@ -1,6 +1,6 @@
 ## What should you use for offline storage of your Progressive Web App?
 
-Suggestion:
+Recommentations:
 
 * **URL addressable resources: Use the (Service Worker) Cache API**
 * **All other data: IndexedDB (using a Promise wrapper library)**
@@ -16,7 +16,13 @@ Suggestion:
 | [AppCache][]    |✔      |                     |             |        |                 | [Chrome: Deprecating HTTP support][],  [Firefox: Intent to Deprecate][]                                                     |                                                                                                                                                                              |                                                                           |
 | [FileSystem][]  | ✔    | ✔  (callback based) | ✔           | ✔      |                 | Sandboxed - not native file access. No interest from other vendors outside Chrome |                                                                                                                                                                              |
 
+## Current and future work
 
+* [Durable Storage][]: protect storage from the user agent’s clearing policies 
+* [Indexed Database API 2.0][]: advanced key-value data management
+* [Quota Management API][]: check how much quota an app/origin is using
+* [Directory downloads][]: allow sites to download directories without .zip files
+* [File and Directory Entries API][]: support for file and directory upload by drag-and-drop
 
 [IndexedDB]: https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API
 [Cache API]: https://developer.mozilla.org/en-US/docs/Web/API/Cache
@@ -45,3 +51,7 @@ Suggestion:
 [Async Cookies API proposed]: https://github.com/bsittler/async-cookies-api
 [sw-toolbox]: https://github.com/GoogleChrome/sw-toolbox
 [Dexie]: http://dexie.org/
+[Durable Storage]: https://storage.spec.whatwg.org/
+[Directory downloads]: https://github.com/drufball/directory-download
+[Quota Management API]: https://www.w3.org/TR/quota-api/
+[Indexed Database API 2.0]: https://w3c.github.io/IndexedDB/
