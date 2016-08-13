@@ -29,6 +29,15 @@ Recommentations:
 * [Directory downloads][]: allow sites to download directories without .zip files
 * [File and Directory Entries API][]: support for file and directory upload by drag-and-drop
 
+## Resources
+
+* [Browser Database Comparison](http://nolanlawson.github.io/database-comparison/)
+* [State of offline storage APIs](https://docs.google.com/presentation/d/11CJnf77N45qPFAhASwnfRNeEMJfR-E_x05v1Z6Rh5HA/edit)
+* [IndexedDB, WebSQL, LocalStorage – what blocks the DOM?](https://nolanlawson.com/2015/09/29/indexeddb-websql-localstorage-what-blocks-the-dom/)
+* [How to think about databases (Pokedex research)](https://nolanlawson.com/2016/02/08/how-to-think-about-databases/)
+* [Which APIs are supported in Web Workers and Service Workers?](https://nolanlawson.github.io/html5workertest/)
+* [The state of binary data in the browser](https://github.com/nolanlawson/state-of-binary-data-in-the-browser)
+
 [IndexedDB]: https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API
 [Cache API]: https://developer.mozilla.org/en-US/docs/Web/API/Cache
 [FileSystem]: https://developer.mozilla.org/en-US/docs/Web/API/FileSystem
