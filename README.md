@@ -15,7 +15,8 @@ Recommentations:
 | [WebSQL][]      |      | ✔  (callback based) |             |        |                 | Nearly unlimited storage. Not available in a Web/Service Worker. Rejected by Edge, Firefox.  Likely to unship in Chrome.                      |                                                                                                                                                                              |
 | [AppCache][]    |✔      |                     |             |        |                 | [Chrome: Deprecating HTTP support][],  [Firefox: Intent to Deprecate][]                                                     |                                                                                                                                                                              |                                                                           |
 | [FileSystem][]  | ✔    | ✔  (callback based) | ✔           | ✔      |                 | Nearly unlimited storage. Sandboxed - not native file access. No interest outside Chrome |                                                                                                                                                                              |
-*"Nearly unlimted storage" generally means storage up until the available [quota](http://www.html5rocks.com/en/tutorials/offline/quota-research/) is reached*
+* *"Nearly unlimted storage" generally means storage up until the available [quota](http://www.html5rocks.com/en/tutorials/offline/quota-research/) is reached*
+* *If the SW cache (Cache API) is full, the browser will fail to cache more data (this applies to all origin storage, including IDB). Date headers can be used to get the age of cached items for cache invalidation.*
 
 ## Current and future work
 
